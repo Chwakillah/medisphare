@@ -1,10 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { navBarData } from "../../staticData/navbarData";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-blue-300 shadow-sm">
+        {/* Bagian Kiri */}
         <div className="navbar-start">
+          {/* Dropdown untuk mobile */}
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -14,54 +18,64 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
+
+            {/* Menu dropdown */}
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {navBarData.map((item) => (
+                <li key={item.id}>
+                  <NavLink
+                    to={item.link}
+                    className={({ isActive }) =>
+                      `px-3 py-2 transition font-montserrat ${
+                        isActive
+                          ? "text-blue-900 font-bold" // aktif → biru lebih terang + bold
+                          : "text-blue-900 font-medium hover:font-bold" // default → biru tua medium
+                      }`
+                    }
+                  >
+                    {item.title}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Medishphere</a>
+
+          {/* Logo / Brand */}
+          <NavLink to="/" className="btn btn-ghost text-xl font-bold">
+            Medishphere
+          </NavLink>
         </div>
+
+        {/* Bagian Tengah (menu versi desktop) */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Beranda</a>
-            </li>
-            <li>
-              <a>Profil</a>
-            </li>
-            <li>
-              <a>Produk</a>
-            </li>
-            <li>
-              <a>Berita</a>
-            </li>
+          <ul className="menu menu-horizontal px-1 font-semibold">
+            {navBarData.map((item) => (
+              <li key={item.id}>
+                <NavLink
+                  to={item.link}
+                  className={({ isActive }) =>
+                    `px-3 py-2 transition font-montserrat ${
+                      isActive
+                        ? "text-blue-900 font-bold" // aktif → biru lebih terang + bold
+                        : "text-blue-900 font-medium hover:font-bold" // default → biru tua medium
+                    }`
+                  }
+                >
+                  {item.title}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
