@@ -1,6 +1,7 @@
 import React from 'react'
 import Sekilas from './components/pages/Sekilas'
 import Navbar from './components/layouts/Navbar'
+import Footer from './components/layouts/Footer'
 import HeroSection from './components/pages/HeroSection'
 import ProdukKami from './components/pages/ProdukKami'
 
@@ -11,6 +12,7 @@ const App = () => {
       <HeroSection/>
       <Sekilas/>
       <ProdukKami/>
+      <Footer/>
     </div>
   )
 }

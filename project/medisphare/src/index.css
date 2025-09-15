@@ -30,4 +30,14 @@
   
   /* Custom Fonts */
   --font-montserrat: "Montserrat", sans-serif;
+
+  /* Custom Gradient */
+  --background-image-gradient-medisphere: linear-gradient(
+    to bottom,
+    #ecf3fe 0%,
+    #B3D8FE 25%,
+    #70A9F9 50%,
+    #497BD5 75%,
+    #214CB0 100%
+  );
 }
