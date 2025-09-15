@@ -3,7 +3,7 @@ import medisImg from "../../assets/medis.svg";
 
 const Sekilas = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between gap-12 max-w-6xl mx-auto px-6 py-16">
+    <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-between gap-16 max-w-6xl mx-auto px-6 py-16">
       {/* Pict */}
       <div className="relative w-full md:w-1/2">
         <img
