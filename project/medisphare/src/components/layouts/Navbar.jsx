@@ -5,7 +5,7 @@ import { navBarData } from "../../staticData/navbarData";
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-blue-300 shadow-sm">
+      <div className="navbar bg-blue2-300 shadow-sm">
         {/* Bagian Kiri */}
         <div className="navbar-start">
           {/* Dropdown untuk mobile */}
@@ -39,8 +39,8 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       `px-3 py-2 transition font-montserrat ${
                         isActive
-                          ? "text-blue-900 font-bold" // aktif → biru lebih terang + bold
-                          : "text-blue-900 font-medium hover:font-bold" // default → biru tua medium
+                          ? "text-blue2-900 font-bold" // aktif → biru lebih terang + bold
+                          : "text-blue2-900 font-medium hover:font-bold" // default → biru tua medium
                       }`
                     }
                   >
@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
 
           {/* Logo / Brand */}
-          <NavLink to="/" className="btn btn-ghost text-xl font-bold">
+          <NavLink to="/" className="btn btn-ghost text-xl font-bold text-blue2-900">
             Medishphere
           </NavLink>
         </div>
