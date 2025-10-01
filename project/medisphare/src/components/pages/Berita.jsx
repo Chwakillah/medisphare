@@ -3,7 +3,7 @@ import React from 'react'
 const Berita = () => {
   return (
     <div>
-      hai berita
+       <h1>Ini halaman Berita</h1>
     </div>
   )
 }

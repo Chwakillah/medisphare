@@ -61,7 +61,7 @@ const ProdukKami = () => {
                   className="w-full h-48 object-cover"
                 />
               </figure>
-              <div className="card-body bg-backgroud p-5">
+              <div className="card-body bg-card p-5">
                 <div className="badge bg-backgroud border-blue-500 text-blue-500 text-xs py-3">
                   {product.category}
                 </div>
