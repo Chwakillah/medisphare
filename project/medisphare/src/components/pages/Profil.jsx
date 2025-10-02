@@ -1,8 +1,12 @@
-import React from 'react'
+import React from "react";
+import Sejarah from "./Sejarah";
 
 const Profil = () => {
-  return <h1>Ini halaman Profil</h1>;
+  return (
+    <div className="w-full min-h-screen">
+      <Sejarah />
+    </div>
+  );
 };
 
 export default Profil;
-
