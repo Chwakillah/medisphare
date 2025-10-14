@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { navBarData } from "../../staticData/navbarData";
+import logo from "../../assets/medisphere-logo.jpeg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
   return (
     <div
       className={`navbar fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-blue2-50" : "bg-blue2-300"
+        scrolled ? "bg-blue2-50" : "bg-blue2-150"
       }`}
     >
       {/* Bagian Kiri */}
@@ -73,9 +74,20 @@ const Navbar = () => {
         {/* Logo / Brand */}
         <NavLink
           to="/"
-          className="btn btn-ghost text-xl font-bold text-blue2-900"
+          className="btn btn-ghost"
         >
-          Medishphere
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar"
+          >
+            <div className="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS Navbar component"
+                src={logo}
+              />
+            </div>
+          </div>
         </NavLink>
       </div>
 
