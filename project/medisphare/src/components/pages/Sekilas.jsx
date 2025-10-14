@@ -9,7 +9,7 @@ const Sekilas = () => {
         <img
           src={medisImg}
           alt="Dokter Medisphere"
-          className="rounded-xl shadow-lg"
+          className="rounded-xl"
         />
       </div>
 
