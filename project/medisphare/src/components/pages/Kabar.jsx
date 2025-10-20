@@ -64,7 +64,6 @@ const Kabar = () => {
   return (
     <section className="w-full min-h-screen bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
-
         <div className="mt-10" />
 
         <div className="flex justify-between items-center mb-12">
@@ -73,7 +72,8 @@ const Kabar = () => {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-3 mb-12 w-full">
+        {/* Search Bar */}
+        <div className="flex justify-center items-center gap-3 mb-12 w-full flex-nowrap">
           <div className="flex items-center bg-white shadow-md rounded-2xl flex-grow max-w-[600px] px-6 py-3 min-w-0">
             <svg
               className="h-5 w-5 text-gray-400 mr-3 flex-shrink-0"
@@ -101,7 +101,7 @@ const Kabar = () => {
 
           <button
             onClick={handleSearch}
-            className="bg-blue-500 text-white px-8 py-3 rounded-2xl font-medium hover:bg-blue-700 transition shrink-0"
+            className="bg-blue-500 text-blue-50 px-8 py-3 rounded-2xl font-medium hover:bg-blue-700 transition shrink-0"
           >
             Cari
           </button>
