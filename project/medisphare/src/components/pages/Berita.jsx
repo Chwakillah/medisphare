@@ -1,9 +1,14 @@
 import React from 'react'
+import Kabar from "./Kabar";
+import Navbar from "../layouts/Navbar";
+import Footer from '../layouts/Footer'
 
 const Berita = () => {
   return (
     <div>
-       <h1>Ini halaman Berita</h1>
+      <Navbar/>
+      <Kabar />
+      <Footer />
     </div>
   )
 }
