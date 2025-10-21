@@ -1,5 +1,6 @@
 import React from 'react';
 import paracetamolImg from "../../assets/paracetamol.svg";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -74,9 +75,12 @@ const ProdukKami = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-500 text-blue-50 px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
-          Lihat Lebih Banyak
-        </button>
+          <Link
+          to="/produk"
+          className="inline-block bg-blue-500 text-blue-50 px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
+        >
+          Lihat Produk Lainnya
+        </Link>
         </div>
       </div>
     </section>

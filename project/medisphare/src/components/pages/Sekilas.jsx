@@ -1,5 +1,6 @@
 import React from "react";
 import medisImg from "../../assets/medis.svg";
+import { Link } from "react-router-dom";
 
 const Sekilas = () => {
   return (
@@ -24,9 +25,12 @@ const Sekilas = () => {
           diam urna tempor. Nec metus bibendum egestas iaculis massa nisl
           malesuada.
         </p>
-        <button className="bg-blue-500 text-blue-50 px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+        <Link
+          to="/profil"
+          className="inline-block bg-blue-500 text-blue-50 px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition"
+        >
           Selengkapnya
-        </button>
+        </Link>
       </div>
     </section>
   );

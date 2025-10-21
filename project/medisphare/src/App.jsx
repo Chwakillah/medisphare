@@ -5,6 +5,7 @@ import Footer from './components/layouts/Footer'
 import HeroSection from './components/pages/HeroSection'
 import ProdukKami from './components/pages/ProdukKami'
 import Berita from './components/pages/BeritaSection'
+import ScrollTop from './utils/ScrollToTop'
 
 const App = () => {
   return (

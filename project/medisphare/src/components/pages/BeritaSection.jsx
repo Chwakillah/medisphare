@@ -1,24 +1,25 @@
-import React from 'react';
+import React from "react";
 import paracetamolImg from "../../assets/paracetamol.svg";
+import { Link } from "react-router-dom";
 
 const newss = [
-  { 
-    id: 1, 
-    name: 'Penggalangan Komitmen Maturitas Industri Farmasi...', 
+  {
+    id: 1,
+    name: "Penggalangan Komitmen Maturitas Industri Farmasi...",
     image: paracetamolImg,
-    desc: 'Kegiatan ini dalam rangka meningkatkan kepatuhan industri farmasi terhadap regulasi dan standar...'
+    desc: "Kegiatan ini dalam rangka meningkatkan kepatuhan industri farmasi terhadap regulasi dan standar...",
   },
-  { 
-    id: 2, 
-    name: 'Penggalangan Komitmen Maturitas Industri Farmasi...', 
+  {
+    id: 2,
+    name: "Penggalangan Komitmen Maturitas Industri Farmasi...",
     image: paracetamolImg,
-    desc: 'Kegiatan ini dalam rangka meningkatkan kepatuhan industri farmasi terhadap regulasi dan standar...'
+    desc: "Kegiatan ini dalam rangka meningkatkan kepatuhan industri farmasi terhadap regulasi dan standar...",
   },
-  { 
-    id: 3, 
-    name: 'Penggalangan Komitmen Maturitas Industri Farmasi...', 
+  {
+    id: 3,
+    name: "Penggalangan Komitmen Maturitas Industri Farmasi...",
     image: paracetamolImg,
-    desc: 'Kegiatan ini dalam rangka meningkatkan kepatuhan industri farmasi terhadap regulasi dan standar...'
+    desc: "Kegiatan ini dalam rangka meningkatkan kepatuhan industri farmasi terhadap regulasi dan standar...",
   },
 ];
 
@@ -27,15 +28,14 @@ const Berita = () => {
     <section className="w-full min-h-screen py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-4xl font-bold text-black">
-            Berita Terbaru
-          </h2>
-          <a 
-            href="/berita" 
+          <h2 className="text-4xl font-bold text-black">Berita Terbaru</h2>
+
+          <Link
+            to="/berita"
             className="text-blue-500 hover:underline font-medium"
           >
-            Lainnya
-          </a>
+            Selengkapnya
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newss.map((news) => (
