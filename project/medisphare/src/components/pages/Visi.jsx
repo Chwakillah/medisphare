@@ -18,36 +18,22 @@ const Visi = () => {
         </h2>
 
         <p className="text-black leading-relaxed text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu nisi
-          tincidunt, varius est ac, lobortis est. In cursus metus nec nunc
-          pulvinar fringilla. Aliquam ultrices arcu eget placerat dignissim.
-          Nunc finibus tellus sed congue posuere. In scelerisque magna sed
-          ligula condimentum, non porta augue tincidunt. In ullamcorper, odio id
-          vehicula egestas, orci ligula auctor massa, id fringilla risus felis
-          non lacus.
+          "Menjadi perusahaan farmasi global yang menghadirkan solusi kesehatan menyeluruh, inovatif, dan berkelanjutan demi meningkatkan kualitas hidup masyarakat dunia"
         </p>
 
-        <ul className="list-disc list-outside pl-5 text-black leading-relaxed space-y-2">
-          <li>Fusce nunc eros, congue sed enim a, rutrum luctus quam.</li>
-          <li>Mauris gravida volutpat lacinia.</li>
+        <ol className="list-disc list-outside pl-5 text-black leading-relaxed space-y-2">
+          <li>Mengembangkan inovasi farmasi berbasis riset ilmiah, teknologi modern, dan kearifan alam untuk menjawab tantangan kesehatan global</li>
+          <li>Menyediakan produk obat yang aman, efektif, dan berkualitas tinggi sesuai standar internasional</li>
           <li>
-            Phasellus felis arcu, volutpat blandit nulla vitae, aliquet
-            facilisis ante.
+            Mendorong kolaborasi multidisiplin antara peneliti, tenaga kesehatan, dan masyarakat untuk membangun ekosistem kesehatan yang terpadu.
           </li>
           <li>
-            Donec a est ut risus tempor rhoncus. Nullam hendrerit commodo est eu
-            luctus.
+            Mengedepankan keberlanjutan dengan memanfaatkan sumber daya secara bijak dan ramah lingkungan.
           </li>
           <li>
-            Etiam quis semper felis. Maecenas varius, massa tincidunt vulputate
-            vulputate.
+            Meningkatkan akses kesehatan secara merata sehingga manfaat inovasi medis dapat dirasakan oleh semua kalangan tanpa batas geografis.
           </li>
-          <li>
-            Quisque vel magna et justo efficitur rutrum non ac ligula. Donec non
-            dui orci.
-          </li>
-          <li>Sed dapibus lobortis ante quis fringilla.</li>
-        </ul>
+        </ol>
       </div>
     </section>
   );

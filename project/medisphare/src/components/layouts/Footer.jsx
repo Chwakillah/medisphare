@@ -11,7 +11,7 @@ const Footer = () => {
               MEDISPHERE.
             </h1>
             <h3 className="font-montserrat text-base font-medium text-blue2-50">
-              Produsen obat terpercaya.
+              Inovatif dan Berkelanjutan.
             </h3>
           </aside>
           <aside className="flex flex-col gap-1 font-montserrat text-base font-medium text-blue2-50">
