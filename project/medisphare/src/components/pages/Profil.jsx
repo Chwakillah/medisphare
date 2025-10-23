@@ -79,7 +79,7 @@ const Profil = () => {
                   Sejarah Medisphere
                 </h2>
                 <p className="text-lg text-[#404040] leading-relaxed mb-6">
-                  Medisphere Pharma berdiri pada tahun 2015 dengan komitmen menghadirkan solusi kesehatan yang inovatif, aman, dan berkelanjutan. Sejak awal, perusahaan berfokus pada riset dan pengembangan obat modern berbasis ilmiah untuk menjawab tantangan kesehatan global.
+                  Medisphere berdiri pada tahun 2015 dengan komitmen menghadirkan solusi kesehatan yang inovatif, aman, dan berkelanjutan. Sejak awal, perusahaan berfokus pada riset dan pengembangan obat modern berbasis ilmiah untuk menjawab tantangan kesehatan global.
                 </p>
                 <p className="text-lg text-[#404040] leading-relaxed">
                   Dalam perjalanannya, Medisphere terus berinovasi melalui pengembangan produk fitofarmaka, penerapan teknologi nano, hingga digitalisasi layanan kesehatan melalui platform SmartHealth, menjadikannya pelopor dalam transformasi farmasi cerdas di Indonesia.

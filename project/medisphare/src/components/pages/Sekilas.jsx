@@ -20,10 +20,7 @@ const Sekilas = () => {
           Sekilas Tentang Medisphere
         </h2>
         <p className="text-black leading-relaxed mb-6">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Vitae
-          pellentesque sem placerat in id cursus mi. Tempus leo eu aenean sed
-          diam urna tempor. Nec metus bibendum egestas iaculis massa nisl
-          malesuada.
+          Medisphere berdiri pada tahun 2015 dengan komitmen menghadirkan solusi kesehatan yang inovatif, aman, dan berkelanjutan. Sejak awal, perusahaan berfokus pada riset dan pengembangan obat modern berbasis ilmiah untuk menjawab tantangan kesehatan global.
         </p>
         <Link
           to="/profil"
