@@ -35,7 +35,7 @@ const products = [
     category: "Tablet", 
     image: img3,
     description: "Antibiotik generasi kedua untuk infeksi bakteri",
-    dosage: "250mg",
+    dosage: "500mg",
     price: "Rp 85.000"
   },
   { 
@@ -53,7 +53,7 @@ const products = [
     category: "Tablet", 
     image: img5,
     description: "Kombinasi antibiotik untuk infeksi yang resisten",
-    dosage: "625mg",
+    dosage: "500mg",
     price: "Rp 95.000"
   },
   { 
@@ -141,7 +141,6 @@ const ProdukKami = () => {
                     <h3 className="font-bold text-gray-900 text-xl mb-1 group-hover:text-blue-600 transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-sm text-gray-500 font-medium">{product.dosage}</p>
                   </div>
                 </div>
                 
