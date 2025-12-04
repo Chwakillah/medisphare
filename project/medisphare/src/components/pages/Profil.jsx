@@ -10,7 +10,8 @@ import {
 import Navbar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
 import farmasiImg from "../../assets/Sejarah.svg";
-import denahImg from "../../assets/denah.svg";
+import denahImg1 from "D:/project/medisphare/src/assets/denah1.png";
+import denahImg2 from "D:/project/medisphare/src/assets/denah2.png";
 
 const Profil = () => {
   const [activeTimeline, setActiveTimeline] = useState(null);
@@ -79,10 +80,18 @@ const Profil = () => {
                   Sejarah Medisphere
                 </h2>
                 <p className="text-lg text-[#404040] leading-relaxed mb-6">
-                  Medisphere berdiri pada tahun 2015 dengan komitmen menghadirkan solusi kesehatan yang inovatif, aman, dan berkelanjutan. Sejak awal, perusahaan berfokus pada riset dan pengembangan obat modern berbasis ilmiah untuk menjawab tantangan kesehatan global.
+                  Medisphere berdiri pada tahun 2015 dengan komitmen
+                  menghadirkan solusi kesehatan yang inovatif, aman, dan
+                  berkelanjutan. Sejak awal, perusahaan berfokus pada riset dan
+                  pengembangan obat modern berbasis ilmiah untuk menjawab
+                  tantangan kesehatan global.
                 </p>
                 <p className="text-lg text-[#404040] leading-relaxed">
-                  Dalam perjalanannya, Medisphere terus berinovasi melalui pengembangan produk fitofarmaka, penerapan teknologi nano, hingga digitalisasi layanan kesehatan melalui platform SmartHealth, menjadikannya pelopor dalam transformasi farmasi cerdas di Indonesia.
+                  Dalam perjalanannya, Medisphere terus berinovasi melalui
+                  pengembangan produk fitofarmaka, penerapan teknologi nano,
+                  hingga digitalisasi layanan kesehatan melalui platform
+                  SmartHealth, menjadikannya pelopor dalam transformasi farmasi
+                  cerdas di Indonesia.
                 </p>
                 <div className="mt-8 flex gap-4">
                   <div className="text-center">
@@ -282,48 +291,73 @@ const Profil = () => {
                 Denah Lokasi
               </h2>
               <p className="text-gray-600 text-lg">
-                Temukan kami di alamat berikut
+                Denah dari perusahaan kami
               </p>
             </div>
 
-            <div className="bg-[#FEFFFC] rounded-3xl shadow-xl overflow-hidden">
-              <div className="aspect-video rounded-3xl overflow-hidden">
-                <img
-                  src={denahImg}
-                  alt="Denah Lokasi Medisphere"
-                  className="w-full h-full object-cover"
-                />
+            {/* Grid untuk 2 Denah */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              {/* Denah 1 */}
+              <div className="group bg-[#FEFFFC] rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={denahImg1}
+                    alt="Denah Lantai 1 Medisphere"
+                    className="w-full h-full object-contain bg-white transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#404040] mb-2">
+                    Denah Biasa
+                  </h3>
+                </div>
               </div>
 
-              <div className="p-8">
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-[#c7e2f2] rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Map className="text-[#496a7c]" size={24} />
-                    </div>
-                    <h4 className="font-semibold text-[#404040] mb-1">
-                      Alamat
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      Jl. Dua-puluh Ilir Tiga, Kec. Ilir Timur Satu, Kota Palembang
-                    </p>
+              {/* Denah 2 */}
+              <div className="group bg-[#FEFFFC] rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={denahImg2}
+                    alt="Denah Lantai 2 Medisphere"
+                    className="w-full h-full object-contain bg-white transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#404040] mb-2">
+                    Denah Beta Laktam
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Info Cards */}
+            <div className="bg-[#FEFFFC] rounded-3xl shadow-xl p-8">
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-[#c7e2f2] rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Map className="text-[#496a7c]" size={24} />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Building2 className="text-green-600" size={24} />
-                    </div>
-                    <h4 className="font-semibold text-[#404040] mb-1">
-                      Kantor Pusat
-                    </h4>
-                    <p className="text-sm text-gray-600">Tower Medhisphere</p>
+                  <h4 className="font-semibold text-[#404040] mb-1">Alamat</h4>
+                  <p className="text-sm text-gray-600">
+                    Jl. Dua-puluh Ilir Tiga, Kec. Ilir Timur Satu, Kota
+                    Palembang
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Building2 className="text-green-600" size={24} />
                   </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Target className="text-purple-600" size={24} />
-                    </div>
-                    <h4 className="font-semibold text-[#404040] mb-1">Area</h4>
-                    <p className="text-sm text-gray-600">Palembang</p>
+                  <h4 className="font-semibold text-[#404040] mb-1">
+                    Kantor Pusat
+                  </h4>
+                  <p className="text-sm text-gray-600">Tower Medhisphere</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Target className="text-purple-600" size={24} />
                   </div>
+                  <h4 className="font-semibold text-[#404040] mb-1">Area</h4>
+                  <p className="text-sm text-gray-600">Palembang</p>
                 </div>
               </div>
             </div>

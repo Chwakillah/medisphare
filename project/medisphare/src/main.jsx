@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profil from './components/pages/Profil.jsx';
 import Produk from './components/pages/Produk.jsx';
 import Berita from './components/pages/Berita.jsx';
+import BeritaDetail from './components/pages/BeritaDetail.jsx';
 import RootLayout from './utils/RootLayout.jsx'; 
 
 const router = createBrowserRouter([
@@ -18,6 +19,8 @@ const router = createBrowserRouter([
       { path: "profil", element: <Profil /> }, 
       { path: "produk", element: <Produk /> }, 
       { path: "berita", element: <Berita /> }, 
+      // Tambahkan parameter :id untuk dynamic routing
+      { path: "detail-berita/:id", element: <BeritaDetail /> }, 
     ],
   },
 ]);

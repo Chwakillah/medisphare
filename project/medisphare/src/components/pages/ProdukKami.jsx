@@ -126,12 +126,6 @@ const ProdukKami = () => {
                   {product.category}
                 </div>
 
-                {/* Quick View Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full font-semibold text-gray-900 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    Lihat Detail
-                  </div>
-                </div>
               </div>
 
               {/* Content */}

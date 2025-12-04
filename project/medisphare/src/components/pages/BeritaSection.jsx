@@ -1,36 +1,45 @@
 import React from "react";
 import { Calendar, ArrowRight, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
-
-import img1 from "../../assets/news/1.jpeg";
-import img2 from "../../assets/news/2.jpg";
-import img3 from "../../assets/news/3.jpg";
+import img1 from "D:/project/medisphare/src/assets/news/1.png";
+import img2 from "D:/project/medisphare/src/assets/news/2.png";
+import img3 from "D:/project/medisphare/src/assets/news/3.png";
+import img4 from "D:/project/medisphare/src/assets/news/4.png";
 
 const newss = [
   {
-    id: 1,
-    name: "Indonesia Menjadi Tuan Rumah 26th DCVMN Annual General Meeting 2025, Bio Farma dan DCVMN Perkuat",
-    image: img1,
-    desc: "Indonesia kembali menjadi pusat perhatian dunia kesehatan global. Melalui PT Bio Farma (Persero), Indonesia dipercaya menjadi tuan rumah penyelenggaraan 26th Developing",
-    date: "20 Oktober 2025",
-    readTime: "5 menit"
-  },
-  {
-    id: 2,
-    name: "Jejak Indonesia di Lanskap Vaksin Dunia, Bio Farma dan DCVMN Wujudkan Ketahanan Kesehatan Lewat Kolaborasi Global",
-    image: img2,
-    desc: "Peran Indonesia melalui PT Bio Farma (Persero) dalam jejaring produsen vaksin negara berkembang atau Developing Countries Vaccine Manufacturers Network (DCVMN) memiliki sejarah panjang dan strategis dalam memperkuat kolaborasi global untuk memperluas akses terhadap vaksin yang aman, bermutu, dan terjangkau bagi masyarakat dunia.",
-    date: "18 Oktober 2025",
-    readTime: "4 menit"
-  },
-  {
-    id: 3,
-    name: "Sorak Sorai Warnai Pembukaan BiOlympics 2025!",
-    image: img3,
-    desc: "Kamis sore itu, kawasan Bio Farma berubah menjadi lautan semangat! Pembukaan BiOlympics 2025 berlangsung meriah, membuka rangkaian ajang olahraga tahunan yang selalu dinanti-nantikan. Suasana kian membara saat kompetisi pertama, poundfit, resmi dimulai diiringi tepuk tangan dan sorak-sorai dari para karyawan yang tumpah ruah memadati area acara.",
-    date: "15 Oktober 2025",
-    readTime: "6 menit"
-  },
+      id: 1,
+      name: "Program Donasi dan Distribusi Obat kepada Masyarakat",
+      image: img1,
+      desc: "Kegiatan ini dilakukan sebagai bentuk kepedulian PT Medisphere terhadap kesehatan masyarakat, terutama bagi kelompok yang kurang mampu atau wilayah yang terdampak bencana.",
+      date: "20 Oktober 2025",
+      readTime: "5 menit"
+    },
+    {
+      id: 2,
+      name: "Edukasi Kesehatan melalui Booth Informasi dan Konsultasi",
+      image: img2,
+      desc: "PT Medisphere secara rutin membuka booth edukasi kesehatan pada kegiatan masyarakat seperti posyandu, car free day, acara komunitas, maupun program pemerintah daerah.",
+      date: "18 Oktober 2025",
+      readTime: "4 menit"
+    },
+    {
+      id: 3,
+      name: "Layanan Kesehatan Bergerak (Mobile Health Service)",
+      image: img3,
+      desc: "Sebagai perusahaan yang memahami pentingnya akses kesehatan, PT Medisphere menyediakan layanan kesehatan bergerak menggunakan kendaraan operasional yang dilengkapi dengan alat kesehatan dasar.",
+      date: "15 Oktober 2025",
+      readTime: "6 menit"
+    },
+    {
+      id: 4,
+      name: "Seminar dan Pelatihan Kesehatan untuk Komunitas",
+      image: img4,
+      desc: "PT Medisphere juga melaksanakan kegiatan edukatif berupa seminar, penyuluhan, dan pelatihan kepada berbagai kelompok masyarakat, termasuk siswa sekolah, mahasiswa kesehatan, serta organisasi komunitas.",
+      date: "15 Oktober 2025",
+      readTime: "6 menit"
+    },
 ];
 
 const Berita = () => {
@@ -51,20 +60,22 @@ const Berita = () => {
             </p>
           </div>
 
-          <a
-            href="/berita"
+          <Link
+            to="/berita"
             className="group flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Lihat Semua
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newss.map((news, index) => (
-            <article
+            <Link
               key={news.id}
+              to={`/detail-berita/${news.id}`}
+              state={{ news }}
               className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
               style={{
                 animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
@@ -110,15 +121,12 @@ const Berita = () => {
                 </p>
 
                 {/* Read More Link */}
-                <a
-                  href={`/`}
-                  className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:gap-3 transition-all"
-                >
+                <span className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all">
                   Baca Selengkapnya
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

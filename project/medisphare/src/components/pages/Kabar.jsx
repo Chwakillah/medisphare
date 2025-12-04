@@ -1,32 +1,42 @@
 import React, { useState } from "react";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
-import img1 from "../../assets/news/1.jpeg";
-import img2 from "../../assets/news/2.jpg";
-import img3 from "../../assets/news/3.jpg";
+import img1 from "D:/project/medisphare/src/assets/news/1.png";
+import img2 from "D:/project/medisphare/src/assets/news/2.png";
+import img3 from "D:/project/medisphare/src/assets/news/3.png";
+import img4 from "D:/project/medisphare/src/assets/news/4.png";
 
 const newss = [
   {
     id: 1,
-    name: "Indonesia Menjadi Tuan Rumah 26th DCVMN Annual General Meeting 2025, Bio Farma dan DCVMN Perkuat",
+    name: "Program Donasi dan Distribusi Obat kepada Masyarakat",
     image: img1,
-    desc: "Indonesia kembali menjadi pusat perhatian dunia kesehatan global. Melalui PT Bio Farma (Persero), Indonesia dipercaya menjadi tuan rumah penyelenggaraan 26th Developing",
+    desc: "Kegiatan ini dilakukan sebagai bentuk kepedulian PT Medisphere terhadap kesehatan masyarakat, terutama bagi kelompok yang kurang mampu atau wilayah yang terdampak bencana.",
     date: "20 Oktober 2025",
     readTime: "5 menit"
   },
   {
     id: 2,
-    name: "Jejak Indonesia di Lanskap Vaksin Dunia, Bio Farma dan DCVMN Wujudkan Ketahanan Kesehatan Lewat Kolaborasi Global",
+    name: "Edukasi Kesehatan melalui Booth Informasi dan Konsultasi",
     image: img2,
-    desc: "Peran Indonesia melalui PT Bio Farma (Persero) dalam jejaring produsen vaksin negara berkembang atau Developing Countries Vaccine Manufacturers Network (DCVMN) memiliki sejarah panjang dan strategis dalam memperkuat kolaborasi global untuk memperluas akses terhadap vaksin yang aman, bermutu, dan terjangkau bagi masyarakat dunia.",
+    desc: "PT Medisphere secara rutin membuka booth edukasi kesehatan pada kegiatan masyarakat seperti posyandu, car free day, acara komunitas, maupun program pemerintah daerah.",
     date: "18 Oktober 2025",
     readTime: "4 menit"
   },
   {
     id: 3,
-    name: "Sorak Sorai Warnai Pembukaan BiOlympics 2025!",
+    name: "Layanan Kesehatan Bergerak (Mobile Health Service)",
     image: img3,
-    desc: "Kamis sore itu, kawasan Bio Farma berubah menjadi lautan semangat! Pembukaan BiOlympics 2025 berlangsung meriah, membuka rangkaian ajang olahraga tahunan yang selalu dinanti-nantikan. Suasana kian membara saat kompetisi pertama, poundfit, resmi dimulai diiringi tepuk tangan dan sorak-sorai dari para karyawan yang tumpah ruah memadati area acara.",
+    desc: "Sebagai perusahaan yang memahami pentingnya akses kesehatan, PT Medisphere menyediakan layanan kesehatan bergerak menggunakan kendaraan operasional yang dilengkapi dengan alat kesehatan dasar.",
+    date: "15 Oktober 2025",
+    readTime: "6 menit"
+  },
+  {
+    id: 4,
+    name: "Seminar dan Pelatihan Kesehatan untuk Komunitas",
+    image: img4,
+    desc: "PT Medisphere juga melaksanakan kegiatan edukatif berupa seminar, penyuluhan, dan pelatihan kepada berbagai kelompok masyarakat, termasuk siswa sekolah, mahasiswa kesehatan, serta organisasi komunitas.",
     date: "15 Oktober 2025",
     readTime: "6 menit"
   },
@@ -72,11 +82,11 @@ const Kabar = () => {
           </p>
         </div>
 
-        {/* Search Bar — styled like Produk */}
+        {/* Search Bar */}
         <div className="mb-16 max-w-3xl mx-auto">
           <div className="relative">
             <div className="flex items-center bg-white shadow-lg rounded-2xl px-6 py-4 border-2 border-transparent focus-within:border-blue-400 transition-all duration-200">
-              {/* Search Icon (SVG similar to Produk) */}
+              {/* Search Icon */}
               <svg className="h-6 w-6 text-blue-500 mr-3 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
               </svg>
@@ -123,7 +133,6 @@ const Kabar = () => {
         {filteredNews.length === 0 && (
           <div className="text-center py-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-4">
-              {/* reuse a simple SVG instead of lucide Search for consistent look */}
               <svg className="w-10 h-10 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
               </svg>
@@ -141,12 +150,14 @@ const Kabar = () => {
           </div>
         )}
 
-        {/* Grid Berita */}
+        {/* Grid Berita - Updated dengan Link */}
         {filteredNews.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredNews.map((news, index) => (
-              <article
+              <Link
                 key={news.id}
+                to={`/detail-berita/${news.id}`}
+                state={{ news }}
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
@@ -192,15 +203,12 @@ const Kabar = () => {
                   </p>
 
                   {/* Read More Link */}
-                  <a
-                    href="/"
-                    className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:gap-3 transition-all"
-                  >
+                  <span className="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all">
                     Baca Selengkapnya
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         )}
